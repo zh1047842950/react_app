@@ -4,7 +4,7 @@ RUN mkdir /workspace/react_app/ -p
 COPY . /workspace/react_app/
 WORKDIR /workspace/react_app
 #RUN npm install \
-RUN source /etc/profile && npm install \
+RUN source /etc/profile && npm install --unsafe-perm\
 && npm run build
 
 FROM nginx:latest
