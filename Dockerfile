@@ -1,4 +1,4 @@
-FROM zsf10838438/react_env:v2
+FROM zsf10838438/react_env:v2 as dev
 #FROM node:latest as dev
 RUN mkdir /workspace/react_app/ -p
 COPY . /workspace/react_app/
