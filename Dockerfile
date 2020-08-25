@@ -10,3 +10,5 @@ RUN source /etc/profile && npm install --unsafe-perm\
 FROM nginx:latest
 COPY --from=dev /workspace/react_app/build /usr/share/nginx/html
 EXPOSE 9090:80
+
+
