@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/dev_image_list/react_env:v2
+FROM zsf10838438/react_env:v2
 #FROM node:latest as dev
 RUN mkdir /workspace/react_app/ -p
 COPY . /workspace/react_app/
