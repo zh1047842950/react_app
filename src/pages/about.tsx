@@ -1,5 +1,5 @@
 import React from 'react'
-import "styles/about.sass"
+import "src/styles/about.sass"
 
 export interface P {
     className?: string

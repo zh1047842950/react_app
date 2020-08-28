@@ -2,7 +2,7 @@ import React from 'react'
 import {
     Link
 } from "react-router-dom";
-import "styles/navs.sass"
+import "src/styles/navs.sass"
 
 export interface P {
     className?: string
