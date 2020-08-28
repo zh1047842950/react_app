@@ -1,5 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from "react-router-dom";
+import {Home, About} from "./pages"
+import {Navs} from 'components'
+
 import './App.css';
 import './App.sass'
 
@@ -23,7 +31,18 @@ function App() {
                 >
                     Learn React
                 </a>
+                <Navs />
             </header>
+            <Router>
+                <Switch>
+                    <Route exact path="/">
+                        <Home />
+                    </Route>
+                    <Route path="/about">
+                        <About />
+                    </Route>
+                </Switch>
+            </Router>
         </div>
     );
 }
