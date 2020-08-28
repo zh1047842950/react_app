@@ -6,7 +6,7 @@ import {
     Route
 } from "react-router-dom";
 import {Home, About} from "./pages"
-import {Navs} from 'components'
+import {Navs} from './components'
 
 import './App.css';
 import './App.sass'
