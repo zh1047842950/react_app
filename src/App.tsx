@@ -1,9 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import {
-    BrowserRouter as Router,
+    BrowserRouter,
     Switch,
-    Route
+    Route,
+    Redirect
 } from "react-router-dom";
 import {Home, About} from "./pages"
 import {Navs} from './components'
@@ -33,7 +34,7 @@ function App() {
                 </a>
                 <Navs />
             </header>
-            <Router>
+            <BrowserRouter>
                 <Switch>
                     <Route exact path="/">
                         <Home />
@@ -41,8 +42,9 @@ function App() {
                     <Route path="/about">
                         <About />
                     </Route>
+                    <Redirect to="/" />
                 </Switch>
-            </Router>
+            </BrowserRouter>
         </div>
     );
 }
