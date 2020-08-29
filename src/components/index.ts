@@ -1,5 +1,7 @@
-// const Navs = () => import('./navs')
-import Navs from './navs'
+import asyncComponent from './async_component'
+
+const Navs = asyncComponent(() => import("./navs"))
 export {
+    asyncComponent,
     Navs
 }

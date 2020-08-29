@@ -27,6 +27,12 @@ class Navs extends React.Component<P, S> {
                         <Link to="/">Home</Link>
                     </li>
                     <li>
+                        <Link to="/mall">Mall</Link>
+                    </li>
+                    <li>
+                        <Link to="/community">Community</Link>
+                    </li>
+                    <li>
                         <Link to="/about">About</Link>
                     </li>
                 </ul>

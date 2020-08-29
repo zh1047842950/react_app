@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
     BrowserRouter,
@@ -8,7 +7,7 @@ import {
     Redirect
 } from "react-router-dom";
 import logo from './logo.svg';
-import {Home, About} from "./pages"
+import {Home, About, Mall, Community} from "./pages"
 import {Navs} from './components'
 import './App.css';
 import './App.sass'
@@ -16,33 +15,32 @@ import './App.sass'
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <div className={'title'}>DaoCloud 自动化部署攻略</div>
-                <div className={'progress'}>
-                    详情查看<a href={'https://www.jianshu.com/p/c06ff3293a35'} target={'_blank'}>DaoCloud 自动化部署攻略</a>
-                </div>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-                {/*<Navs />*/}
-            </header>
+            {/*<header className="App-header">*/}
+            {/*<img src={logo} className="App-logo" alt="logo" />*/}
+
+            {/*<p>*/}
+            {/*    Edit <code>src/App.tsx</code> and save to reload.*/}
+            {/*</p>*/}
+            {/*<a*/}
+            {/*    className="App-link"*/}
+            {/*    href="https://reactjs.org"*/}
+            {/*    target="_blank"*/}
+            {/*    rel="noopener noreferrer"*/}
+            {/*>*/}
+            {/*    Learn React*/}
+            {/*</a>*/}
+            {/*</header>*/}
+            <div className={'title'}>DaoCloud 自动化部署攻略</div>
+            <div className={'progress'}>
+                详情查看<a href={'https://www.jianshu.com/p/c06ff3293a35'} target={'_blank'}>DaoCloud 自动化部署攻略</a>
+            </div>
             <BrowserRouter basename={'/react_app'}>
+                <Navs />
                 <Switch>
-                    <Route exact path="/">
-                        <Home />
-                    </Route>
-                    <Route path="/about">
-                        <About />
-                    </Route>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/mall" component={Mall} />
+                    <Route path="/community" component={Community} />
+                    <Route path="/about" component={About} />
                     <Redirect to="/" />
                 </Switch>
             </BrowserRouter>
