@@ -33,7 +33,7 @@ function App() {
                 >
                     Learn React
                 </a>
-                <Navs />
+                {/*<Navs />*/}
             </header>
             <BrowserRouter basename={'/react_app'}>
                 <Switch>
