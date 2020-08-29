@@ -37,11 +37,11 @@ function App() {
             <BrowserRouter basename={'/react_app'}>
                 <Navs />
                 <Switch>
-                    <Route exact path="/" component={Home} />
+                    <Route exact path={["/", "/home"]} component={Home} />
                     <Route path="/mall" component={Mall} />
                     <Route path="/community" component={Community} />
                     <Route path="/about" component={About} />
-                    <Redirect to="/" />
+                    <Redirect to="/home" />
                 </Switch>
             </BrowserRouter>
         </div>

@@ -6,5 +6,5 @@
   cp -r ./build/* ./share_file
   ps -aux | more
   echo "Update react_app success!"$now
-  ps -aux
+#  ps -aux
 
